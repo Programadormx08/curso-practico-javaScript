@@ -16,3 +16,21 @@ figure
     height: auto;
     padding: 5px;
 }
+
+.main-container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main-container__form
+{
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 50px;
+}
+.main-container__form label
+{
+    margin-top: 10px;
+}
