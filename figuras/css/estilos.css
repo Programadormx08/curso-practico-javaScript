@@ -1,6 +1,47 @@
+body
+{
+    background: linear-gradient(red,red);
+    height: 100vh;
+}
+
+.container__h2
+{
+    text-align: center;
+    margin-top: 15px;
+
+}
+
 .header
 {
     background-color: #d11a1afa;
     text-align: center;
     color: #f3dedefa;
+}
+
+.img-container
+{
+    margin-top: 25px;
+}
+
+.img-container div
+{
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.img-container div
+{
+    width: 100px;
+    height: 100px;
+
+}
+
+.img-container div:hover
+{
+    opacity: 0.8;
+}
+
+.resultado
+{
+    margin-top: 15px;
 }
