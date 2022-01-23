@@ -1,42 +1,98 @@
-const cuadrado = document.querySelector(".img1");
-const triangulo = document.querySelector(".img2");
-const circulo = document.querySelector(".img3");
-
-cuadrado.addEventListener("click", ()=>
+//codigo para cuadrado.
+const medidaCuadrado = document.querySelector(".medida-cuadrado");
+document.querySelector(".submit-area").addEventListener("click", ()=>
 {
-    let dato = parseInt(prompt("¿cuanto mide cada lado de cuadrado?"));
-    let perimetro = dato * 4;
-    let area = dato * dato;
-    let codeHtml = `<p>Figura: cuadrado</p><br>
-                    <p>Perimetro: ${perimetro}</p><br>
-                    <p>Area: ${area}</p>`
-    document.querySelector(".resultado").innerHTML = codeHtml;
+    let lado = parseInt(medidaCuadrado.value);
+    let area = lado * lado;
+    if (isNaN(area)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Area = ${area} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-cuadrado").innerHTML = htmlCode;
+    }
+});
+document.querySelector(".submit-perimetro").addEventListener("click", ()=>
+{
+    let lado = parseInt(medidaCuadrado.value);
+    let perimetro = lado * 4;
+    if (isNaN(perimetro)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Perimetro = ${perimetro} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-cuadrado").innerHTML = htmlCode;
+    }
 });
 
-triangulo.addEventListener("click", ()=>
-{
-    let base = parseInt(prompt("¿cuanto mide la base del triangulo?"));
-    let lado = parseInt(prompt("¿cuanto mide cada lado del triangulo?"));
-    let altura = parseInt(prompt("¿cuanto mide la altura del triangulo?"));
-    let perimetro = base + (lado * 2);
-    let area = (base * altura)/2;
+//codigo para triangulo
+const ladoA = document.querySelector(".lado-a")
+const ladoB = document.querySelector(".lado-b")
+const base = document.querySelector(".base")
+const altura = document.querySelector(".altura")
 
-    let codeHtml = `<p>Figura: Triangulo</p><br>
-                    <p>Perimetro: ${perimetro}</p><br>
-                    <p>Area: ${area}</p>`
-    document.querySelector(".resultado").innerHTML = codeHtml;
-});
-
-circulo.addEventListener("click", ()=>
+document.querySelector(".submit-area-triangulo").addEventListener("click",()=>
 {
-    let diametro = parseInt(prompt("¿cuanto mide el diametro del circulo?"));
+    let medidaladoA = parseInt(ladoA.value);
+    let medidaladoB = parseInt(ladoB.value);
+    let medidaBase = parseInt(base.value);
+    let medidaAltura = parseInt(altura.value);
+    let area = (medidaBase * medidaAltura) / 2;
+    if (isNaN(area)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Area = ${area} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-triangulo").innerHTML = htmlCode;
+    }
+})
+
+document.querySelector(".submit-perimetro-triangulo").addEventListener("click",()=>
+{
+    let medidaladoA = parseInt(ladoA.value);
+    let medidaladoB = parseInt(ladoB.value);
+    let medidaBase = parseInt(base.value);
+    let medidaAltura = parseInt(altura.value);
+    let perimetro = medidaladoA + medidaladoB + medidaBase;
+    if (isNaN(perimetro)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Perimetro = ${perimetro} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-triangulo").innerHTML = htmlCode;
+    }
+})
+
+
+//codigo para circulo
+const medidaCirculo = document.querySelector(".medida-circulo")
+
+document.querySelector(".submit-area-circulo").addEventListener("click",()=>
+{
+    let diametro = parseInt(medidaCirculo.value);
     let radio = diametro / 2;
     let area = 3.1416 * (radio * radio);
+    if (isNaN(area)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Area = ${area} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-circulo").innerHTML = htmlCode;
+    }
+})
 
-    let codeHtml = `<p>Figura: Circulo</p><br>
-                    <p>Radio: ${radio}</p><br>
-                    <p>Diametro: ${diametro}</p><br>
-                    <p>Area: ${area}</p>`
-    document.querySelector(".resultado").innerHTML = codeHtml;
-});
+
+document.querySelector(".submit-perimetro-circulo").addEventListener("click",()=>
+{
+    let diametro = parseInt(medidaCirculo.value);
+    let radio = diametro / 2;
+    let perimetro = 3.1416 * diametro
+    if (isNaN(perimetro)) {
+        alert("ingresa los datos correctamente")
+    } else
+    {
+        let htmlCode = `<p>Perimetro = ${perimetro} <small>unida de medida<small>.</p>`
+        document.querySelector(".respuesta-circulo").innerHTML = htmlCode;
+    }
+})
 

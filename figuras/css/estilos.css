@@ -1,47 +1,82 @@
 body
 {
-    background: linear-gradient(red,red);
+    background: linear-gradient(#665c5cf2,#7e7979c4);
     height: 100vh;
-}
-
-.container__h2
-{
-    text-align: center;
-    margin-top: 15px;
-
 }
 
 .header
 {
-    background-color: #d11a1afa;
     text-align: center;
-    color: #f3dedefa;
+    background: #9f9696;
 }
 
-.img-container
+.fig-container
 {
-    margin-top: 25px;
+    display: flex;
+    margin-top: 55px;
+    justify-content: space-around;
 }
 
-.img-container div
+.fig-container .fig-container__item
 {
-    display: inline-block;
-    margin-left: 100px;
+    width: 400px;
+    height: auto;
+    border: solid 2px black;
+    border-radius: 5px;
 }
 
-.img-container div
+
+.fig-container header
 {
-    width: 100px;
-    height: 100px;
-
+    background: gray;
 }
 
-.img-container div:hover
+.fig-container__item header h2
 {
-    opacity: 0.8;
+    text-align: center;
 }
 
-.resultado
+.fig-container header i
+{
+    padding: 4px;
+}
+
+.fig-container__item form
+{
+    text-align: center;
+}
+
+.form-cuadrado .submit-perimetro
 {
     margin-top: 15px;
+}
+
+.form-cuadrado .submit-perimetro
+{
+    margin-top: 15px;
+}
+
+.respuesta-cuadrado
+{
+    margin-top: 10px;
+}
+
+.submit-area-triangulo
+{
+    margin-top: 15px;
+}
+
+.respuesta-triangulo
+{
+    margin-top: 10px;
+}
+
+.submit-area-circulo
+{
+    margin-top: 15px;
+}
+
+.respuesta-circulo
+{
+    margin-top: 10px;
 }
