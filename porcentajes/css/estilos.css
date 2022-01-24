@@ -12,9 +12,10 @@ body
 
 figure
 {
-    width: 190px;
+    width: 135px;
     height: auto;
     padding: 5px;
+    text-align: center;
 }
 
 .main-container
@@ -28,9 +29,29 @@ figure
 {
     border: solid 2px black;
     border-radius: 20px;
-    padding: 50px;
+    padding: 40px 50px;
+    text-align: center;
 }
-.main-container__form label
+
+.main-container__form span
 {
-    margin-top: 10px;
+    margin-top: 7px;
+}
+
+.main-container__form .descuento
+{
+    margin-top: 5px;
+}
+
+.main-container__form .enviar
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: black;
+    color: white;
+}
+
+.main-container__form .pago
+{
+    margin-top: 5px;
 }
