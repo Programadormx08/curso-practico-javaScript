@@ -1,5 +1,5 @@
 let numeros = [1,3,7,1,9,3,12];
-let frutas = ["aguacate","aaguacate","pera","manzana","cebolla","consome","girasol"]
+let numbers2 = [3,46,12,89,120,54];
 
 
 // const promedio = ()=>
@@ -15,9 +15,9 @@ let frutas = ["aguacate","aaguacate","pera","manzana","cebolla","consome","giras
 
 const mediana= ()=>
 {
-    let half = numeros.length / 2 % 2;
-    if (half == 0) console.log("lista par")
-    else console.log("lista impar");
+    let half = numbers2.length / 2 % 2;
+    if (half == 0) console.log("even list")
+    else console.log("odd list");
 
 };
 
